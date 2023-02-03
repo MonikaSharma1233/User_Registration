@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -39,9 +40,20 @@ namespace UserRegistrationRegex
         {
             Console.WriteLine("Enter Your Mobile Number");
             string userInput = Console.ReadLine();
+            //Add 9 and 1 as first two integers should be atmost one and one space required first integer of no cannot be 0 
+            //then last 9 digits can be any int
             string regesCondition = "^[9]{1}[1]{1}[ ]{1}[1-9]{1}[0-9]{9}$";
             Iteration(userInput, regesCondition);
         }
+        public static void PassMin8Char()
+        {
+            Console.WriteLine("Enter your Passwoard");
+            string userInput = Console.ReadLine();
+            //length should be 8 char min and should have conbination of  small a to z and A to Z 
+            string regexCondition = "^[a-zA-ZO-9]{8,}$";
+            Iteration(userInput, regexCondition);
+        }
+
         public static void Iteration(string userInput, string regexCondition)
         {
             if (Regex.IsMatch(userInput, regexCondition))
