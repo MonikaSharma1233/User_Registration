@@ -11,7 +11,10 @@ namespace UserRegistractionRegex
             {
                 Console.WriteLine("Please select any one from below :\n" +
                 "Enter 1 : For First Name." +
-                "Enter 2 : For Last Name");
+                "Enter 2 : For Last Name." +
+                "Enter 3 :For Email Id." +
+                "Enter 4 :For Mobile Number." +
+                "Enter 5: For Passwoard (minimum 8 Character ).");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +26,12 @@ namespace UserRegistractionRegex
                         break;
                     case 3:
                         UserDetails.Emailid();
+                        break;
+                    case 4:
+                        UserDetails.MobileNumber();
+                        break;
+                    case 5:
+                        UserDetails.PassMin8Char();
                         break;
                     default:
                         Console.WriteLine("Invalid option selected ,Please try again !");
