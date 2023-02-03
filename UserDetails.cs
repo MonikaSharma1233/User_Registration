@@ -53,6 +53,14 @@ namespace UserRegistrationRegex
             string regexCondition = "^[a-zA-ZO-9]{8,}$";
             Iteration(userInput, regexCondition);
         }
+        public static void PassMin8CharAnd1UpperCase()
+        {
+            Console.WriteLine("Enter Your Password");
+            string userInput = Console.ReadLine();
+            //One should be uperletter atleast one = *
+            string regexCondition = "^(?=.*[A-Z]),{1,}[a-zA-ZO-9]{7,}$";
+            Iteration(userInput, regexCondition);
+        }
 
         public static void Iteration(string userInput, string regexCondition)
         {
