@@ -58,7 +58,7 @@ namespace UserRegistrationRegex
             Console.WriteLine("Enter Your Password");
             string userInput = Console.ReadLine();
             //One should be uperletter atleast one = *
-            string regexCondition = "^(?=.*[A-Z]),{1,}[a-zA-ZO-9]{7,}$";
+               
             Iteration(userInput, regexCondition);
         }
         public static void UpperCase1AndNumeric1()
